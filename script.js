@@ -18,3 +18,14 @@ window.addEventListener("scroll", function () {
     navbar.classList.remove("scrolled");
   }
 });
+//Translate google
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: "en",
+      includedLanguages: "ar,en,fr,de,es", // اللغات المتاحة
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    },
+    "google_translate_element"
+  );
+}
