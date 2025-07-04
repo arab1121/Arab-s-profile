@@ -16,6 +16,7 @@
 /* HTML Styleing */
 html {
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 /* General Styling */
@@ -28,6 +29,7 @@ body {
   background: url(photo.jpg);
   background-size: cover;
   backdrop-filter: blur(8px);
+  overflow-x: hidden;
 }
 
 main {
@@ -56,6 +58,11 @@ p {
 }
 /*Navigation Styling*/
 .nav_tag {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav_tag2 {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -100,6 +107,19 @@ header {
 .nav_tag.scrolled {
   background-color: var(--color_navigation);
 }
+.nav_tag2.scrolled {
+  background-color: var(--color_navigation);
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar.scrolled {
+  background-color: var(--color_navigation);
+  transition: background-color 0.3s ease;
+}
+
 /*About Me Selection Style*/
 .about_me {
   margin-top: 50px;
