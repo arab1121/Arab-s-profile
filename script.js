@@ -1,7 +1,7 @@
 var comments = document.getElementById("comments");
 var send_msg = document.getElementById("send_btn");
 var lable = document.getElementById("lable");
-
+//feedback massage
 send_msg.addEventListener("click", function () {
   if (comments.value) {
     comments.value =
@@ -9,16 +9,19 @@ send_msg.addEventListener("click", function () {
     console.log(comments.value);
   }
 });
-
+//scrool event
 window.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".nav_tag");
-  if (window.scrollY > 0) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
+  const navbar = document.querySelector("header");
+  if (navbar) {
+    if (window.scrollY > 0) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
   }
 });
-//Translate google
+
+//google translate
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
     {
