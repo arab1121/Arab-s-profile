@@ -1,7 +1,7 @@
 /* Main Variable */
 :root {
   /*demintion*/
-  --main_width: 900px;
+  --main_width: 960px;
   /*color*/
   --color_general: #333;
   --background_color: #f5f5f5;
@@ -17,6 +17,7 @@
 html {
   scroll-behavior: smooth;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* General Styling */
@@ -27,7 +28,8 @@ body {
   margin: 0;
   padding: 0;
   background: url(photo.jpg);
-  background-size: cover;
+  background-attachment: fixed;
+  background-position-y: 50%;
   backdrop-filter: blur(8px);
   overflow-x: hidden;
 }
@@ -44,6 +46,9 @@ h3 {
 }
 p {
   font-size: 17px;
+}
+a {
+  text-decoration: none;
 }
 /*Title button*/
 #title {
@@ -118,8 +123,45 @@ header {
 .navbar.scrolled {
   background-color: var(--color_navigation);
   transition: background-color 0.3s ease;
+  position: sticky;
 }
-
+#google_translate_element {
+  div {
+    div {
+      background: none;
+    }
+  }
+}
+iframe {
+  html {
+    body {
+      div {
+        background-color: var(--color_navigation);
+        table {
+          tbody {
+            tr {
+              td {
+                text-decoration: none;
+                a {
+                  color: var(--color_navigation);
+                  text-decoration: none;
+                  div {
+                    span {
+                      color: var(--color_navigation);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+text {
+  color: green;
+}
 /*About Me Selection Style*/
 .about_me {
   margin-top: 50px;
@@ -195,6 +237,43 @@ header {
   p {
     transform: scale(1.1);
   }
+}
+/*New Certificated Styling*/
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 40px 20px;
+}
+
+.certificate-card {
+  background: var(--background_spaces);
+  border: 2px solid var(--color_navigation);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.certificate-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+.certificate-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.certificate-card h2 {
+  margin-bottom: 10px;
+  color: var(--heading_color);
+}
+
+.certificate-card p {
+  color: var(--color_general);
+  line-height: 1.6;
 }
 
 /*Teacher Say Styling*/
@@ -364,6 +443,14 @@ footer {
 /*My Certificated*/
 .my_certificates {
   max-width: 900px;
+  h2 {
+    background-color: var(--background_header);
+    box-sizing: border-box;
+    padding: 20px 0 20px 0;
+    border: solid 2px var(--color_navigation);
+    border-left: 0;
+    border-right: 0;
+  }
   iframe {
     background-color: var(--background_spaces);
     margin: 20px 0px 20px 0px;
@@ -385,8 +472,11 @@ footer {
   }
   div {
     img {
-      width: 60%;
+      width: 70%;
       border: solid 1px var(--heading_color);
+    }
+    iframe {
+      width: 20%;
     }
   }
 }
@@ -408,6 +498,29 @@ footer {
   }
 }
 .back_btn:hover {
+  a {
+    background-color: var(--white_color);
+  }
+  p {
+    transform: scale(1.1);
+  }
+}
+.goup_btn {
+  a {
+    text-decoration: none;
+    background-color: var(--background_spaces);
+    border-radius: 8px;
+    padding: 20px 5px 20px 5px;
+    color: var(--heading_color);
+    margin-bottom: 20px;
+    padding: 20px 20px 20px 20px;
+  }
+  p {
+    transition: 0.3s;
+  }
+}
+
+.goup_btn:hover {
   a {
     background-color: var(--white_color);
   }
