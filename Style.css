@@ -318,6 +318,11 @@ text {
     padding: 20px 20px 20px 20px;
     margin: 0;
   }
+
+  #labela {
+    background-color: var(--background_header);
+  }
+
   a {
     text-decoration: none;
     font-weight: bold;
